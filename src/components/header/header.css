@@ -12,3 +12,23 @@
     text-align: center;
     vertical-align: middle;
 }
+
+.header_list {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.header_list-item {
+    display: block;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.header_list-item:hover {
+    border: 2px solid rgb(83, 158, 243);
+    box-shadow: 0 0 10px cadetblue;
+}

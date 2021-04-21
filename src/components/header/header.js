@@ -1,5 +1,6 @@
 import {React, Component} from "react";
-import "./header.css";
+import SearchPanel from "../search-panel";
+import "./header.scss";
 
 const Header = () => {
  return (
@@ -9,6 +10,7 @@ const Header = () => {
             <li className="header_list-item">In process</li>
             <li className="header_list-item">Archieve</li>
         </ul>
+        <SearchPanel/>
      </div>
  )
 }

@@ -1,3 +1,5 @@
+@import "../service/variables.scss";
+
 .header {
     background: linear-gradient(145deg, rgb(158, 208, 252), rgb(110, 186, 187));
     display: flex;
@@ -17,6 +19,7 @@
     display: flex;
     justify-content: space-around;
     width: 40%;
+    
 }
 
 .header_list-item {
@@ -26,9 +29,9 @@
     color: white;
     cursor: pointer;
     padding: 20px;
+    max-height: 30%;
 }
 
 .header_list-item:hover {
-    border: 2px solid rgb(83, 158, 243);
-    box-shadow: 0 0 10px cadetblue;
+    @include border;
 }

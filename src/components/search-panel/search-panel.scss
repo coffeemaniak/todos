@@ -1,0 +1,29 @@
+@import "../service/variables.scss";
+
+.search_block {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+.search_panel {
+    max-height: 30px;
+    width: 200px;
+    margin: 1rem auto;
+    outline: 1px solid rgb(83, 158, 243);
+}
+
+.search_button {
+    width: 70px;
+    height: 30px;
+    background-color: rgb(31, 98, 110);
+    border-radius: 5px;
+    color: white;
+    padding: 0;
+    margin: 1rem auto;
+
+}
+
+.search_panel:hover,
+.search_button:hover {
+    @include border
+}

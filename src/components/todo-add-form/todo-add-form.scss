@@ -1,0 +1,9 @@
+@import "../service/variables.scss";
+
+.add_button {
+    @include beauty-button
+}
+
+.add_button:hover {
+    @include border
+}

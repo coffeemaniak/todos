@@ -13,13 +13,7 @@
 }
 
 .search_button {
-    width: 70px;
-    height: 30px;
-    background-color: rgb(31, 98, 110);
-    border-radius: 5px;
-    color: white;
-    padding: 0;
-    margin: 1rem auto;
+    @include beauty-button
 
 }
 

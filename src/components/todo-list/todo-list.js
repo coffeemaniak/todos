@@ -1,8 +1,11 @@
 import React from "react";
+import TodoItem from "../todo-item";
 
 const TodoList = () => {
     return (
-        <h1>Hi</h1>
+        <ul>
+            <TodoItem/>
+        </ul>
     )
 }
 

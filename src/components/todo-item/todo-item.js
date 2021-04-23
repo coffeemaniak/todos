@@ -1,4 +1,5 @@
 import {React, Component} from "react";
+import "./todo-item.scss";
 
 const TodoItem = () => {
     return (
@@ -7,10 +8,14 @@ const TodoItem = () => {
                 Task one
             </span>
             <div>
-                <button type="button">
+                <button 
+                type="button"
+                className="button_important">
                     Important
                 </button>
-                <button type="button">
+                <button 
+                type="button"
+                className="button_arcieve">
                     Move to Archieve
                 </button>
             </div>

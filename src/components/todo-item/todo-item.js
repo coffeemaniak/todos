@@ -1,11 +1,12 @@
 import {React, Component} from "react";
 import "./todo-item.scss";
 
-const TodoItem = () => {
+const TodoItem = ({label, important = false}) => {
+    
     return (
         <li>
             <span>
-                Task one
+                {label}
             </span>
             <div>
                 <button 

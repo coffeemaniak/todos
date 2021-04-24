@@ -4,7 +4,7 @@ import TodoItem from "../todo-item";
 const TodoList = () => {
     return (
         <ul>
-            <TodoItem/>
+            <TodoItem label="hi there" impprtant/>
         </ul>
     )
 }

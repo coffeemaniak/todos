@@ -1,11 +1,12 @@
 @mixin border {
-    border: 2px solid rgb(83, 158, 243);
+    border: 1px solid rgb(83, 158, 243);
     box-shadow: 0 0 10px cadetblue;
 }
 
 @mixin beauty-button {
+    box-sizing: border-box;
     width: 70px;
-    height: 30px;
+    height: 34px;
     background-color: rgb(31, 98, 110);
     border-radius: 5px;
     color: white;

@@ -7,3 +7,17 @@
 .add_button:hover {
     @include border
 }
+
+.add_task {
+    height: 30px;
+    width: 500px;
+    outline: 1px solid rgb(83, 158, 243);
+    margin-right: 20px;
+    padding-left: 10px;
+}
+
+.add_form {
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+}

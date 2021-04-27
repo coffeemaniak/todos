@@ -1,0 +1,27 @@
+.buttons_group {
+    display: inline-block;
+}
+
+.button_important,
+.button_arcieve,
+.button_delete {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.todo_item {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.item_label {
+    display: inline-block;
+}

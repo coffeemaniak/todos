@@ -3,10 +3,11 @@ import "./todo-add-form.scss";
 
 const TodoAddForm = () => {
     return (
-        <form>
+        <form className="add_form">
             <input
                 type="text"
                 placeholder="Add new task"
+                className="add_task"
             />
             <button 
             type="submit"

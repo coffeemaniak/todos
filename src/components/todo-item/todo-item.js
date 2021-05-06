@@ -3,13 +3,41 @@ import "./todo-item.scss";
 import done from "./done.png";
 import high from "./important.png";
 import del from "./delete.png";
+import {db} from "../service/firebase";
 
 
 export default class TodoItem extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            important: false,
+        };
+    }
+    // state = {}
+    // componentDidMount() {
+    //     db.collection("inProcess")
+    //     .get()
+    //     .then(snapshot => {
+    //         const todos = snapshot.docs.map((doc => ({
+    //             id: doc.id,
+    //             ...doc.data()
+    //         })))
+        
+    //     })
+    //     .then((todos) => this.setState(todos))
+    // .catch((error) => {
+    //     console.log("Error getting documents: ", error);
+    // });
+
+    // return this.state;
+    // }
+
     render() {
-        const {label, important = false} = this.props;
+        // console.log(this.state);
+        const {label} = this.props;
+        // console.log(label);
         return (
-            <li className="todo_item">
+            <>
             <span className="item_label">
                 {label}
             </span>
@@ -30,7 +58,7 @@ export default class TodoItem extends Component {
                     <img src={del} alt="delete" width="35px" height="35px"/>
                 </button>
             </div>
-        </li>
+            </>
         )
     }
 }

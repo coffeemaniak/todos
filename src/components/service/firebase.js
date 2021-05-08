@@ -14,4 +14,18 @@ firebase.initializeApp({
 
 const db = firebase.firestore();
 
+
+// getData = async () => {
+//     const res = await db.collection("inProcess")
+//     await .get()
+//     .then(snap => {
+//       console.log(todos)
+//         todos = snap.docs.map(doc => ({
+//             id: doc.id,
+//             ...doc.data()
+//         }));
+//       return res;
+//   }
+
+
 export { db };

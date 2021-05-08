@@ -8,22 +8,12 @@ import { db } from "../service/firebase";
 
 
 export default class App extends Component {
-  // const [todos, setTodos] = useState([]);
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: [
-        db.collection("inProcess")
-        .get()
-        .then(snapshot => {
-            const todos = snapshot.docs.map(doc => ({
-                id: doc.id,
-                ...doc.data()
-            }));
-            console.log(todos)
-        })
-      ]};
-    }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     data: []
+  //   };
+  // }
 
     render() {
       return (
@@ -31,7 +21,7 @@ export default class App extends Component {
           <header className="App_header">
             <Header/>
           </header>
-          <TodoList posts={this.state.data}/>
+          <TodoList/>
           <TodoAddForm/>
         </div>
       );
@@ -39,15 +29,4 @@ export default class App extends Component {
   }
     
 
-//   return (
-//     <div className="App">
-//       <header className="App_header">
-//         <Header/>
-//       </header>
-//       <TodoList posts={todos}/>
-//       <TodoAddForm/>
-//     </div>
-//   );
-// }
 
-// export default App;

@@ -6,40 +6,35 @@ import del from "./delete.png";
 import {db} from "../service/firebase";
 
 
-export default class TodoItem extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            important: false,
-        };
-    }
-    // state = {}
+const TodoItem = (props) => {
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         data: [],
+    //         important: false,
+    //     };
+    // }
+
     // componentDidMount() {
     //     db.collection("inProcess")
     //     .get()
-    //     .then(snapshot => {
-    //         const todos = snapshot.docs.map((doc => ({
+    //     .then(snapshot => 
+    //         snapshot.docs.map((doc => ({
     //             id: doc.id,
     //             ...doc.data()
     //         })))
-        
-    //     })
-    //     .then((todos) => this.setState(todos))
-    // .catch((error) => {
-    //     console.log("Error getting documents: ", error);
-    // });
-
-    // return this.state;
+    //     .then(data => this.setState({data: data}))
     // }
 
-    render() {
+
+    // render() {
         // console.log(this.state);
-        const {label} = this.props;
-        // console.log(label);
+        // const {label} = this.props;
+        // // console.log(label);
         return (
             <>
             <span className="item_label">
-                {label}
+                {props.label}
             </span>
             <div className="buttons_group">
                 <button 
@@ -61,7 +56,7 @@ export default class TodoItem extends Component {
             </>
         )
     }
-}
+// }
 
 // const TodoItem = ({label, important = false}) => {
     
@@ -85,4 +80,4 @@ export default class TodoItem extends Component {
 //         </li>
 //     )
 // }
-
+export default TodoItem;

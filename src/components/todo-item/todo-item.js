@@ -6,7 +6,13 @@ import del from "./delete.png";
 import {db} from "../service/firebase";
 
 
-const TodoItem = (props) => {
+export default class TodoItem extends Component {
+    render() {
+        const {label, important, finishes} = this.props;
+        let classes = "todo_item";
+    if (important) {
+        classes +=" item_important";
+    } 
     // constructor(props) {
     //     super(props);
     //     this.state = {
@@ -33,8 +39,9 @@ const TodoItem = (props) => {
         // // console.log(label);
         return (
             <>
+            <li className={classes}>
             <span className="item_label">
-                {props.label}
+                {label}
             </span>
             <div className="buttons_group">
                 <button 
@@ -53,8 +60,10 @@ const TodoItem = (props) => {
                     <img src={del} alt="delete" width="35px" height="35px"/>
                 </button>
             </div>
+            </li>
             </>
         )
+    }
     }
 // }
 
@@ -80,4 +89,3 @@ const TodoItem = (props) => {
 //         </li>
 //     )
 // }
-export default TodoItem;

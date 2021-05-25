@@ -1,3 +1,7 @@
+// .todo-item {
+//     width: 100%;
+// }
+
 .buttons_group {
     display: inline-block;
 }
@@ -18,10 +22,14 @@
 .todo_item {
     display: flex;
     justify-content: space-between;
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
 }
 
 .item_label {
     display: inline-block;
+}
+
+.item_important {
+    color: red;
 }

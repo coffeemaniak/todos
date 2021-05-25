@@ -24,13 +24,13 @@ export default class TodoList extends Component {
         console.log(this.state);
          return ( 
              <div>
-             <ul className="todo_list">
-            <li className="todo_item">
-            {
-                this.state.data.map(data => <TodoItem key={data.id} label={data.label}/>)
-            }
-                
-            </li></ul>
+                <ul className="todo_list">
+                    
+                        {
+                        this.state.data.map(data => <TodoItem key={data.id} label={data.label} important={data.important} finished={data.done}/>)
+                        }
+                    
+                </ul>
             </div>
         );
     }

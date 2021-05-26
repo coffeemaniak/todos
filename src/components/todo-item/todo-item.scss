@@ -24,12 +24,20 @@
     justify-content: space-between;
     width: 100%;
     margin: 0 auto;
+    margin-bottom: 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    // background-color: rgb(226, 248, 250)
 }
 
 .item_label {
     display: inline-block;
+    font-size: 25px;
+    font-weight: 600;
 }
 
 .item_important {
     color: red;
+    border: 1px solid blue;
 }

@@ -8,7 +8,7 @@ import {db} from "../service/firebase";
 
 export default class TodoItem extends Component {
     render() {
-        const {label, important, finishes} = this.props;
+        const {label, important, finished} = this.props;
         let classes = "todo_item";
     if (important) {
         classes +=" item_important";

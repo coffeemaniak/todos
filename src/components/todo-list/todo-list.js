@@ -20,6 +20,33 @@ export default class TodoList extends Component {
             .then(data => this.setState({data: data}));
     }
 
+    // deleteItem (id) {
+    //     this.setState(({data}) => {
+    //         const index = data.findIndex(elem => elem.id === id);
+    //         const before = data.slice(0, index);
+    //         const after = data.slice(index + 1);
+
+    //         const newArr = [...before, ...after];
+    //         return {
+    //             data: newArr
+    //         }
+    //     })
+    // }
+
+    // onToggleImportant(id) {
+    //     this.setState(({data}) => {
+    //         const index = data.findIndex(elem => elem.id === id);
+    //         const old = data[index];
+    //         const newItem = {...old, important: !old.important};
+
+    //         const newArr = [...data.slice(0, index), newItem, ...data.slice(index + 1)];
+
+    //         return {
+    //             data: newArr
+    //         }
+    //     })
+    // }
+
     render() {
         console.log(this.state);
          return ( 
@@ -27,7 +54,13 @@ export default class TodoList extends Component {
                 <ul className="todo_list">
                     
                         {
-                        this.state.data.map(data => <TodoItem key={data.id} label={data.label} important={data.important} finished={data.done}/>)
+                        this.state.data.map(data => 
+                        <TodoItem 
+                            key={data.id} 
+                            label={data.label} 
+                            important={data.important}
+                            // onToggleImportant={this.onToggleImportant} 
+                            finished={data.done}/>)
                         }
                     
                 </ul>

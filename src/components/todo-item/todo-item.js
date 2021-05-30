@@ -8,35 +8,12 @@ import {db} from "../service/firebase";
 
 export default class TodoItem extends Component {
     render() {
-        const {label, important, finished} = this.props;
+        const {label, important, finished, onToggleImportant} = this.props;
         let classes = "todo_item";
     if (important) {
         classes +=" item_important";
     } 
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         data: [],
-    //         important: false,
-    //     };
-    // }
-
-    // componentDidMount() {
-    //     db.collection("inProcess")
-    //     .get()
-    //     .then(snapshot => 
-    //         snapshot.docs.map((doc => ({
-    //             id: doc.id,
-    //             ...doc.data()
-    //         })))
-    //     .then(data => this.setState({data: data}))
-    // }
-
-
-    // render() {
-        // console.log(this.state);
-        // const {label} = this.props;
-        // // console.log(label);
+    
         return (
             <>
             <li className={classes}>
@@ -46,7 +23,8 @@ export default class TodoItem extends Component {
             <div className="buttons_group">
                 <button 
                 type="button"
-                className="button_important">
+                className="button_important"
+                onClick={onToggleImportant}>
                     <img src={high} alt="important" width="35px" height="35px"/>
                 </button>
                 <button 

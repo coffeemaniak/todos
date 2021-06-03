@@ -42,33 +42,58 @@
     }
 
     .header_list {
-        flex-direction: column;
+        display: block;
         position: relative;
     }
-
-    .header_list:hover
-    .header_list-item--child {
-        display: block;
-        // position: absolute;
-        // width: 100px;
+    
+    .dropdown {
+        width: 150px;
+        height: 50px;
+        background-color: transparent;
+        outline: none;
+        text-transform: uppercase;
+        color: white;
+        border: 1px solid white;
+        border-radius: 10px;
+        margin-top: 5px;
     }
 
-    .header_list-item:first-child {
-        display: block;
-        // position: absolute;
+    .dropdown:hover {
+        background-color:rgb(189, 249, 250);
     }
 
-    .header_list-item--child {
-        // visibility: hidden;
-        display: none;
-        // position: absolute;
-        // min-width: 160px;
-        // min-height: 100px;
-        // z-index: 1;
-    }
-
-    // .header_list-item:first-child:hover
-    // .header_list-item--child {
-    //     visibility: visible;
+    // .header_list-item:first-child {
+    //     display: block;
+    //     position: absolute;
     // }
+
+    .header_list-item--content {
+        display: none;
+        position: absolute;
+        min-width: 150px;
+        min-height: 300px;
+        background-color: rgb(174, 229, 243);
+        z-index: 1;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .header_list-item--content li {
+        display: block;
+    }
+
+    .header_list-item {
+        margin-left: 0;
+    }
+
+    .header_list-item:hover {
+        border: none;
+        border-bottom: 1px solid rgb(83, 158, 243);
+    }
+
+    .header_list:hover .header_list-item--content {
+        display: flex;
+        flex-direction: column;
+    }
+
 }

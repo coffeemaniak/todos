@@ -9,11 +9,15 @@ const Header = () => {
          <img src={logo} alt="logo" className="logo"/>
         {/* <h1 className="header_title">My Classic ToDoS</h1> */}
         <ul className="header_list">
-            <li className="header_list-item">Today</li>
-            <li className="header_list-item header_list-item--child">Week</li>
-            <li className="header_list-item header_list-item--child">Month</li>
-            <li className="header_list-item header_list-item--child">Important</li>
-            <li className="header_list-item header_list-item--child">Archieve</li>
+            <button className="dropdown">Menu</button>
+            <div className="header_list-item--content">
+                <li className="header_list-item">Today</li>
+                <li className="header_list-item">Week</li>
+                <li className="header_list-item">Month</li>
+                <li className="header_list-item">Important</li>
+                <li className="header_list-item">Archieve</li>
+            </div>
+            
         </ul>
         <SearchPanel/>
      </div>

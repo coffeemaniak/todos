@@ -1,38 +1,50 @@
 @import "../service/variables.scss";
 
 .header {
-    background: linear-gradient(145deg, rgb(158, 208, 252), rgb(110, 186, 187));
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-}
+        background: linear-gradient(145deg, rgb(158, 208, 252), rgb(110, 186, 187));
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
 
-.logo {
-    width: 150px;
-    height: 150px;
-}
+@media (min-width: 769px) {
+
+    .logo {
+        width: 150px;
+        height: 150px;
+    }
 
 
-.header_list {
-    display: flex;
-    justify-content: space-around;
-    width: 20%;
-    margin-top: 30px;
-    margin-bottom: 0;
-}
+    .header_list {
+        display: flex;
+        justify-content: space-around;
+        width: 20%;
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
 
-.header_list-item {
-    display: block;
-    border-bottom: 1px solid white;
-    color: white;
-    cursor: pointer;
-    padding: 20px;
-    max-height: 15%;
-    margin-left: 10px;
-}
+    .header_list-item {
+        display: block;
+        border-bottom: 1px solid white;
+        color: white;
+        cursor: pointer;
+        padding: 20px;
+        max-height: 15%;
+        margin-left: 10px;
+    }
 
-.header_list-item:hover {
-    @include border;
+    .header_list-item:hover {
+        @include border;
+    }
+
+    .dropdown {
+        display: none;
+    }
+
+    .header_list-item--content {
+        display: flex;
+        position: unset;
+    }
 }
 
 @media (max-width: 768px) and (min-width: 480px) {
@@ -47,6 +59,7 @@
     }
     
     .dropdown {
+        display: block;
         width: 150px;
         height: 50px;
         background-color: transparent;
@@ -59,7 +72,7 @@
     }
 
     .dropdown:hover {
-        background-color:rgb(189, 249, 250);
+        background-color:rgb(91, 164, 182);
     }
 
     // .header_list-item:first-child {
@@ -72,7 +85,7 @@
         position: absolute;
         min-width: 150px;
         min-height: 300px;
-        background-color: rgb(174, 229, 243);
+        background-color: rgb(91, 164, 182);
         z-index: 1;
         border-radius: 10px;
         text-align: center;
@@ -83,17 +96,22 @@
     }
 
     .header_list-item {
+        display: block;
+        border-bottom: 1px solid white;
+        color: white;
+        cursor: pointer;
+        padding: 20px;
         margin-left: 0;
     }
 
     .header_list-item:hover {
         border: none;
         border-bottom: 1px solid rgb(83, 158, 243);
+        background-color:rgb(158, 208, 252)
     }
 
     .header_list:hover .header_list-item--content {
         display: flex;
         flex-direction: column;
     }
-
 }

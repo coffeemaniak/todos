@@ -34,10 +34,24 @@
 .item_label {
     display: inline-block;
     font-size: 25px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .item_important {
-    color: red;
+    color: #a00bec;
     border: 1px solid blue;
+}
+
+@media (max-width: 768px) and (min-width: 480px) {
+    .item_label {
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    .button_important img,
+    .button_arcieve img,
+    .button_delete img {
+        width: 25px;
+        height: 25px;
+    }
 }

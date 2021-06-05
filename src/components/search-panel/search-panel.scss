@@ -25,11 +25,12 @@
 
 @media (max-width: 768px) and (min-width: 480px) {
     .search_block{
-        width: 200px;
+        width: 180px;
         position: relative;
+        margin-top: 15px;
     }
     .search_panel {
-        width: 100px;
+        width: 90px;
         display: none;
         position: absolute;
     }

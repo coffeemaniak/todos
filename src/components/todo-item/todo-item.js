@@ -37,6 +37,7 @@ export default class TodoItem extends Component {
                 className="button_delete">
                     <img src={del} alt="delete" width="35px" height="35px"/>
                 </button>
+                <button type="button"/>
             </div>
             </li>
             </>

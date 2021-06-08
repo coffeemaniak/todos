@@ -21,3 +21,15 @@
     margin: 0 auto;
     text-align: center;
 }
+
+@media (max-width: 768px) and (min-width: 480px) {
+    .add_task {
+        width: 300px;
+    }
+}
+
+@media (max-width: 479px) and (min-width: 320px) {
+    .add_task {
+        width: 150px;
+    }
+}

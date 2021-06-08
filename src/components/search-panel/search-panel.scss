@@ -46,3 +46,13 @@
         margin-right: 10px;
     }
 }
+
+@media (min-width: 769px) and (max-width: 1130px) {
+    .search_block {
+        width: 200px;
+    }
+
+    .search_panel {
+        width: 100px;
+    }
+}

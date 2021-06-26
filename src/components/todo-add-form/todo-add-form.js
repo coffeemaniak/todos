@@ -3,6 +3,7 @@ import "./todo-add-form.scss";
 
 const TodoAddForm = () => {
     return (
+        <div className="add_block">
         <form className="add_form">
             <input
                 type="text"
@@ -12,19 +13,19 @@ const TodoAddForm = () => {
             <div className="checkbox_group">
                 <label className="checrkbox_group--label">
                     <input type="checkbox"/>
-                    Today
+                    <span>Today</span>
                 </label>
                 <label className="checrkbox_group--label">
                     <input type="checkbox"/>
-                    This week
+                    <span>This week</span>
                 </label>
                 <label className="checrkbox_group--label">
                     <input type="checkbox"/>
-                    This Month
+                    <span>This Month</span>
                 </label>
                 <label className="checrkbox_group--label"> 
                     <input type="checkbox"/>
-                    Important
+                    <span>Important</span>
                 </label>
             </div>
             <button 
@@ -33,6 +34,7 @@ const TodoAddForm = () => {
                 Add
             </button>
         </form>
+        </div>
     )
 }
 

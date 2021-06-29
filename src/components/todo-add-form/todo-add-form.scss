@@ -49,7 +49,8 @@
 	line-height: 22px;    
 }
 
-input[type=checkbox] {
+input[type=checkbox],
+input[type=radio] {
     position: absolute;
 	z-index: -1;
 	opacity: 0;
@@ -70,13 +71,15 @@ input[type=checkbox] {
 	box-shadow: inset 0 0 3px #8a8a8a;;
 }
 
-.checrkbox_group--label input[type=checkbox] + span::after {
+.checrkbox_group--label input[type=checkbox] + span::after,
+.checrkbox_group--label input[type=radio] + span::after {
     content: "";	
 	opacity: 0;
 	transition: opacity 0.3s ease;
 }
 
-.checrkbox_group--label input[type=checkbox]:checked + span::after {
+.checrkbox_group--label input[type=checkbox]:checked + span::after,
+.checrkbox_group--label input[type=radio]:checked + span::after {
     content: "✓";
 	color: rgb(83, 158, 243);
 	font-size: 30px;

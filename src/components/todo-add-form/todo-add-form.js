@@ -12,15 +12,15 @@ const TodoAddForm = () => {
             />
             <div className="checkbox_group">
                 <label className="checrkbox_group--label">
-                    <input type="checkbox"/>
+                    <input type="radio" name="radio" value="today"/>
                     <span>Today</span>
                 </label>
                 <label className="checrkbox_group--label">
-                    <input type="checkbox"/>
+                    <input type="radio" name="radio" value="week"/>
                     <span>This week</span>
                 </label>
                 <label className="checrkbox_group--label">
-                    <input type="checkbox"/>
+                    <input type="radio" name="radio" value="month"/>
                     <span>This Month</span>
                 </label>
                 <label className="checrkbox_group--label"> 

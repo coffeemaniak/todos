@@ -91,13 +91,35 @@ input[type=radio] {
 }
 
 @media (max-width: 768px) and (min-width: 480px) {
+    .add_block {
+        width: 400px;
+    }
     .add_task {
         width: 300px;
+    }
+
+    .checkbox_group {
+        width: 300px;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 auto;
     }
 }
 
 @media (max-width: 479px) and (min-width: 320px) {
+    .add_block {
+        width: 250px;
+    }
     .add_task {
         width: 150px;
+    }
+
+    .checkbox_group {
+        width: 150px;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 auto;
     }
 }

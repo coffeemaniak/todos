@@ -7,12 +7,29 @@ import {db} from "../service/firebase";
 
 
 export default class TodoItem extends Component {
+    state = {
+        isVisible: false
+    }
     render() {
         const {label, important, finished, onToggleImportant} = this.props;
         let classes = "todo_item";
     if (important) {
         classes +=" item_important";
     } 
+
+    showDropdownMenu(e) {
+        e.preventDefault();
+        this.setState({ isVisible: true }, () => {
+        document.addEventListener('click', this.hideDropdownMenu);
+        });
+      }
+    
+      hideDropdownMenu() {
+        this.setState({ isVisible: false }, () => {
+          document.removeEventListener('click', this.hideDropdownMenu);
+        });
+    
+      }
     
         return (
             <>
@@ -37,7 +54,7 @@ export default class TodoItem extends Component {
                 className="button_delete">
                     <img src={del} alt="delete" width="35px" height="35px"/>
                 </button>
-                <button type="button"/>
+                <button type="button" onClick={this.showDropdownMenu}/>
             </div>
             </li>
             </>
